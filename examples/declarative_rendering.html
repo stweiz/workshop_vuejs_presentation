@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hello World Example</title>
+    </head>
+    <body>
+        <div id='root'>{{message}}</div>
+        <script src="https://unpkg.com/vue@2.2.1" type="text/javascript"></script>
+        <script type="text/javascript">
+            var app = new Vue({
+                el: '#root',
+                data: {
+                    message: 'Hello World'
+                }
+            });
+            app.message = "Hello New World"
+        </script>
+    </body>
+</html>

@@ -38,21 +38,71 @@
 
                         ## Single page application
 
+                        - Browser receives one HTML document
+                        - Content is loaded automatically after HTML document is retrieved
+                            - JavaScript is connected with WebSocket or communicates with HTTP API
+                        - Less data amount in communication between server and client
+
                         ---
 
                         ## MVVM
 
-                        Model-View-ViewModel
+                        Model-View-ViewModel https://blogs.msdn.microsoft.com/johngossman/2005/10/08/introduction-to-modelviewviewmodel-pattern-for-building-wpf-apps/
+
+                        View = presentation + databinding to ViewModel
+                        Model = buisness logic + data (UI independent)
+                        ViewModel = "model of a view": abstraction of view, contains view state (marked checkboxes) and make model values usable for view
 
                         ---
 
                         ## Declarative rendering
 
                         --
+                        ## Declarative programming
+
+                        <pre><code data-trim data-noescape>
+                        var imperativeList = [1,2,3,4,5];
+                        var newList = [];
+
+                        for (var i = 0; i < imperativeList.length; i++) {
+                            newList[i] = imperativeList[i] * 10;
+                        }
+
+                        console.log("The new list is ", newList);
+                        </code></pre>
+
+                        --
+                        ## Imperative programming
+
+                        <pre><code data-trim data-noescape>
+                        var declarativeList = [1,2,3,4,5];
+
+                        var newList = declarativeList.map(function(item){
+                            return item * 10;
+                        });
+
+                        console.log("The new list is ", newList);
+                        </code></pre>
+
+                        --
+                        ## Vue.js declarative rendering example
+                        <pre><code data-trim data-noescape>
+                            <div id='root'>{{message}}</div>
+                            <script src="https://unpkg.com/vue@2.2.1" type="text/javascript"></script>
+                            <script type="text/javascript">
+                                var app = new Vue({
+                                    el: '#root',
+                                    data: {
+                                        message: 'Hello World'
+                                    }
+                                });
+                            </script>
+                        </code></pre>
+                        ---
 
                         ## Single file components
 
-                        --
+                        ---
 
                         ## scoped CSS
 
