@@ -1,165 +1,261 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-                <section data-markdown data-separator="---" data-separator-vertical="--">
-                    <script type="text/template">
-                        ## Vue.js
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-markdown data-separator="---" data-separator-vertical="--">
+            <script type="text/template">
+                ## Vue.js
 
-                        ---
+                ---
 
-                        ## Framework popularity comparison
-                        |Vue |React |Angular
-                        |-  |-    |
-                        |<a class="github-button" href="https://github.com/vuejs/vue/subscription" data-size="large" data-show-count="true" aria-label="Watch vuejs/vue on GitHub">Watch</a><br/><a class="github-button" href="https://github.com/vuejs/vue" data-size="large" data-show-count="true" aria-label="Star vuejs/vue on GitHub">Star</a><br/><a class="github-button" href="https://github.com/vuejs/vue/fork" data-size="large" data-show-count="true" aria-label="Fork vuejs/vue on GitHub">Fork</a>|<a class="github-button" href="https://github.com/facebook/react/subscription" data-size="large" data-show-count="true" aria-label="Watch facebook/react on GitHub">Watch</a><br/><a class="github-button" href="https://github.com/facebook/react" data-size="large" data-show-count="true" aria-label="Star facebook/react on GitHub">Star</a><br/><a class="github-button" href="https://github.com/facebook/react/fork" data-size="large" data-show-count="true" aria-label="Fork facebook/react on GitHub">Fork</a>|<a class="github-button" href="https://github.com/angular/angular/subscription" data-size="large" data-show-count="true" aria-label="Watch angular/angular on GitHub">Watch</a><br/><a class="github-button" href="https://github.com/angular/angular" data-size="large" data-show-count="true" aria-label="Star angular/angular on GitHub">Star</a><br/><a class="github-button" href="https://github.com/angular/angular/fork" data-size="large" data-show-count="true" aria-label="Fork angular/angular on GitHub">Fork</a>|
-                        ---
+                ## Framework popularity comparison
+                |Vue |React |Angular
+                |-  |-    |
+                |<a class="github-button" href="https://github.com/vuejs/vue/subscription" data-size="large" data-show-count="true"
+                    aria-label="Watch vuejs/vue on GitHub">Watch</a><br/><a class="github-button" href="https://github.com/vuejs/vue"
+                                                                            data-size="large" data-show-count="true"
+                                                                            aria-label="Star vuejs/vue on GitHub">Star</a><br/><a
+                        class="github-button" href="https://github.com/vuejs/vue/fork" data-size="large" data-show-count="true"
+                        aria-label="Fork vuejs/vue on GitHub">Fork</a>|<a class="github-button"
+                                                                          href="https://github.com/facebook/react/subscription"
+                                                                          data-size="large" data-show-count="true"
+                                                                          aria-label="Watch facebook/react on GitHub">Watch</a><br/><a
+                        class="github-button" href="https://github.com/facebook/react" data-size="large" data-show-count="true"
+                        aria-label="Star facebook/react on GitHub">Star</a><br/><a class="github-button"
+                                                                                   href="https://github.com/facebook/react/fork"
+                                                                                   data-size="large" data-show-count="true"
+                                                                                   aria-label="Fork facebook/react on GitHub">Fork</a>|<a
+                        class="github-button" href="https://github.com/angular/angular/subscription" data-size="large"
+                        data-show-count="true" aria-label="Watch angular/angular on GitHub">Watch</a><br/><a class="github-button"
+                                                                                                             href="https://github.com/angular/angular"
+                                                                                                             data-size="large"
+                                                                                                             data-show-count="true"
+                                                                                                             aria-label="Star angular/angular on GitHub">Star</a>
+                <br/><a class="github-button" href="https://github.com/angular/angular/fork" data-size="large" data-show-count="true"
+                        aria-label="Fork angular/angular on GitHub">Fork</a>|
+                ---
 
-                        ## Single page application
+                ## Single page application
 
-                        - Browser receives one HTML document
-                        - Content is loaded automatically after HTML document is retrieved
-                            - JavaScript is connected with WebSocket or communicates with HTTP API
-                        - Less data amount in communication between server and client
+                - Browser receives one HTML document
+                - Content is loaded automatically after HTML document is retrieved
+                - JavaScript is connected with WebSocket or communicates with HTTP API
+                - Less data amount in communication between server and client
 
-                        ---
+                ---
 
-                        ## MVVM
+                ## MVVM
 
-                        Model-View-ViewModel https://blogs.msdn.microsoft.com/johngossman/2005/10/08/introduction-to-modelviewviewmodel-pattern-for-building-wpf-apps/
+                Model-View-ViewModel https://blogs.msdn.microsoft.com/johngossman/2005/10/08/introduction-to-modelviewviewmodel-pattern-for-building-wpf-apps/
 
-                        View = presentation + databinding to ViewModel
-                        Model = buisness logic + data (UI independent)
-                        ViewModel = "model of a view": abstraction of view, contains view state (marked checkboxes) and make model values usable for view
+                View = presentation + databinding to ViewModel
+                Model = buisness logic + data (UI independent)
+                ViewModel = "model of a view": abstraction of view, contains view state (marked checkboxes) and make model values usable for view
 
-                        ---
+                ---
 
-                        ## Declarative rendering
+                ## Declarative rendering
 
-                        --
-                        ## Declarative programming
+                --
+                ## Declarative programming
 
-                        <pre><code data-trim data-noescape>
-                        var imperativeList = [1,2,3,4,5];
+                <pre><code data-trim data-noescape>
+                        var declarativeList = [1,2,3,4,5];
                         var newList = [];
 
-                        for (var i = 0; i < imperativeList.length; i++) {
-                            newList[i] = imperativeList[i] * 10;
+                        for (var i = 0; i < declarativeList.length; i++) {
+                            newList[i] = declarativeList[i] * 10;
                         }
 
                         console.log("The new list is ", newList);
                         </code></pre>
 
-                        --
-                        ## Imperative programming
+                --
+                ## Imperative programming
 
-                        <pre><code data-trim data-noescape>
-                        var declarativeList = [1,2,3,4,5];
+                <pre><code data-trim data-noescape>
+                        var imperativeList = [1,2,3,4,5];
 
-                        var newList = declarativeList.map(function(item){
+                        var newList = imperativeList.map(function(item){
                             return item * 10;
                         });
 
                         console.log("The new list is ", newList);
                         </code></pre>
 
-                        --
-                        ## Vue.js declarative rendering example
-                        <pre><code data-trim data-noescape>
+                --
+                ## Vue.js declarative rendering example
+                <pre><code data-trim data-noescape>
                             <div id='root'>{{message}}</div>
                             <script src="https://unpkg.com/vue@2.2.1" type="text/javascript"></script>
-                            <script type="text/javascript">
-                                var app = new Vue({
-                                    el: '#root',
-                                    data: {
-                                        message: 'Hello World'
-                                    }
-                                });
-                            </script>
-                        </code></pre>
-                        ---
+            <script type="text/javascript">
+                var app = new Vue({
+                    el: '#root',
+                    data: {
+                        message: 'Hello World'
+                    }
+                });
+            </script>
+            </code></pre>
+            ---
 
-                        ## Single file components
+            ## Single file components
 
-                        ---
+            ---
 
-                        ## scoped CSS
+            ## scoped CSS
 
-                        vastly reduces the need for a css preprocessor (less, sass).
-                        In most cases you wont need it, but is is easy to use one.
+            vastly reduces the need for a css preprocessor (less, sass).
+            In most cases you wont need it, but is is easy to use one.
 
-                        ---
-
-
-                        ## Virtual DOM
-
-                        react has this too, AngularJS not.
-
-                        ---
-
-                        ## State management
-
-                        ---
+            ---
 
 
-                        ## One way data binding
+            ## Virtual DOM
 
-                        react has this too, AngularJS not.
+            react has this too, AngularJS not.
 
-                        ---
+            ---
 
-                        ## State management with VueX
+            ## State management
 
-                        --
-
-                        ## Events
-
-                        ---
+            ---
 
 
-                    </script>
-                </section>
-			</div>
-		</div>
+            ## One way data binding
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+            react has this too, AngularJS not.
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
+            ---
 
-        <script async defer src="https://buttons.github.io/buttons.js"></script>
-	</body>
+            ## State management with VueX
+
+            --
+
+            ## Events
+
+            ---
+
+
+            ## Start our workshop project
+                - $ cd ~
+                - git clone https://github.com/stweiz/workshop_vuejs.git
+                - $ cd workshop_vuejs
+
+            ---
+
+            ## Lesson 1
+
+            Create a Vue.js application:
+                - Node.js and npm must be installed
+                - $ sudo npm install @vue-cli -g
+                - $ vue create wokshop
+                - default
+                - $ cd wokshop
+                - $ npm run serve
+                - Open http://localhost:8080/
+
+            ---
+
+            ## Bonus for lesson 1:
+
+            Start the Vue UI tool to manage your projects
+                - $ vue ui
+                - Import
+                - "Diesen Ordner importieren"
+
+            ---
+
+            ## Lesson 2
+
+            What did the Vue CLI?
+            - Created project files
+                - .gitignore
+                - babel.config.js
+                    - JavaScript compiler and transpiler
+                    - ES6
+                - package.json
+                    - project dependencies
+                    - some properties
+                - package-lock.json
+                    - Complete tree of generated node_modules
+                - README
+                    - Available npm commands for building, running, testing etc.
+                - public directory
+                    - The index.html is the entrypoint for the user
+                - src directory
+                    - Our Vue.js main application
+                    - Our Vue.js components
+                    - Miscellaneous items for our Vue.js application
+            ---
+
+            ## Lesson 3
+                - In your new project "wokshop" enter:
+                - $ npm run serve
+                - Open a second console and navigate to your wokshop project directory ($ cd ~/wokshop)
+                - $ rm src/components/HelloWorld.vue
+                - $ cp -r ../lesson3/* .
+                - Extend with a second wok
+
+            ---
+
+            ## Lesson 4
+                - $ rm src/components/WokList.vue
+                - $ cp -r ../lesson4/* .
+                - Extend with 3 more woks
+
+            ## Lesson 5
+                - $ cp -r ../lesson5/* .
+                - Write your first own component!
+
+
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
 </html>
