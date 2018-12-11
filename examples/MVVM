@@ -1,0 +1,8 @@
+## MVVM
+
+- Model
+    - business logic + data (UI independent)
+- View
+    - presentation + databinding to ViewModel
+- ViewModel
+    - "model of a view": abstraction of view, contains view state (marked checkboxes) and make model values usable for view
