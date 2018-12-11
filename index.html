@@ -57,6 +57,15 @@
                         aria-label="Fork angular/angular on GitHub">Fork</a>|
                 ---
 
+                ## Vue.js
+
+                progressive web app
+                    - app like experience
+                    - responsive to desktop, mobile devices etc.
+                    - works mostly offline
+                    - has different manifests include, that it can be found and indexed by search engines like Google
+                    - no complex installation
+
                 ## Single page application
 
                 - Browser receives one HTML document
@@ -68,93 +77,101 @@
 
                 ## MVVM
 
-                Model-View-ViewModel https://blogs.msdn.microsoft.com/johngossman/2005/10/08/introduction-to-modelviewviewmodel-pattern-for-building-wpf-apps/
+                Model-View-ViewModel
 
-                View = presentation + databinding to ViewModel
-                Model = buisness logic + data (UI independent)
-                ViewModel = "model of a view": abstraction of view, contains view state (marked checkboxes) and make model values usable for view
+
+                - View = presentation + databinding to ViewModel
+                - Model = business logic + data (UI independent)
+                - ViewModel = "model of a view": abstraction of view, contains view state (marked checkboxes) and make model values usable for view
 
                 ---
 
                 ## Declarative rendering
 
                 --
-                ## Declarative programming
+                ## Imperative programming
 
                 <pre><code data-trim data-noescape>
-                        var declarativeList = [1,2,3,4,5];
+                        var imperativeList = [1,2,3,4,5];
                         var newList = [];
 
-                        for (var i = 0; i < declarativeList.length; i++) {
-                            newList[i] = declarativeList[i] * 10;
+                        for (var i = 0; i < imperativeList.length; i++) {
+                            newList[i] = imperativeList[i] * 10;
                         }
 
                         console.log("The new list is ", newList);
                         </code></pre>
 
                 --
-                ## Imperative programming
+                ## Declarative programming
 
                 <pre><code data-trim data-noescape>
-                        var imperativeList = [1,2,3,4,5];
+                        var declarativeList = [1,2,3,4,5];
 
-                        var newList = imperativeList.map(function(item){
+                        var newList = declarativeList.map(function(item){
                             return item * 10;
                         });
 
                         console.log("The new list is ", newList);
-                        </code></pre>
+                </code></pre>
 
                 --
                 ## Vue.js declarative rendering example
                 <pre><code data-trim data-noescape>
-                            <div id='root'>{{message}}</div>
-                            <script src="https://unpkg.com/vue@2.2.1" type="text/javascript"></script>
-            <script type="text/javascript">
-                var app = new Vue({
-                    el: '#root',
-                    data: {
-                        message: 'Hello World'
-                    }
-                });
-            </script>
-            </code></pre>
+                    <div id='root'>{{message}}</div>
+                    <script src="https://unpkg.com/vue@2.2.1" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        var app = new Vue({
+                            el: '#root',
+                            data: {
+                                message: 'Hello World'
+                            }
+                        });
+                    </script>
+                </code></pre>
             ---
+
+            ## Reactive
+            Changes to dataflow are automatically applied
+
+            - Excel or Calc are good examples:
+                - Adjust a cell of a sum -> event triggers a recalculation of all cells defined in the sum and show the new result
+
+            - Open examples/declarative_rendering.html
+            - Browser console: app.message = "What's up doc?"
 
             ## Single file components
 
+            A component has its own elements, styling and methods
+            HTML, CSS and JavaScript in one file (component)
+            Good overview as long as the project is small
+
             ---
 
-            ## scoped CSS
+            ## Scoped CSS
 
-            vastly reduces the need for a css preprocessor (less, sass).
-            In most cases you wont need it, but is is easy to use one.
+            Vastly reduces the need for a css preprocessor (less, sass).
+            In most cases you wont need it, but it is easy to use one.
+            - Scoped CSS attributes are only for the component, where they are defined
+            - If a used class is defined global, the scoped one will win for a component
 
             ---
 
 
             ## Virtual DOM
 
-            react has this too, AngularJS not.
+            React has this too. AngularJS not.
+            The HTML DOM is a structured and sorted tree. It's like an API to the objects in the tree with which the browser renders the web page and you can adjust elements.
+            On big pages, this is hard to manage and inefficient, if you want to change an element through the API.
+            The Virtual DOM is an abstraction of the DOM. Frameworks like Vue.js or React first manipulates its Virtual DOM with modified objects.
+            Then these details are used to construct the changes in the DOM to match the DOM and the virtual DOM.
 
             ---
 
             ## State management
 
-            ---
-
-
-            ## One way data binding
-
-            react has this too, AngularJS not.
-
-            ---
-
-            ## State management with VueX
-
-            --
-
-            ## Events
+            Share values of data between components.
+            Save them in the local storage of a browser.
 
             ---
 
@@ -211,7 +228,7 @@
                     - Miscellaneous items for our Vue.js application
             ---
 
-            ## Lesson 3
+            ## Lesson 3 (Display a component)
                 - In your new project "wokshop" enter:
                 - $ npm run serve
                 - Open a second console and navigate to your wokshop project directory ($ cd ~/wokshop)
@@ -221,16 +238,38 @@
 
             ---
 
-            ## Lesson 4
+            ## Lesson 4 (Display multiple instances of a component as a list)
                 - $ rm src/components/WokList.vue
                 - $ cp -r ../lesson4/* .
                 - Extend with 3 more woks
 
-            ## Lesson 5
+            ## Lesson 5 (Create a new component)
                 - $ cp -r ../lesson5/* .
                 - Write your first own component!
 
+            ## Lesson 6 (Vue if)
+                - $ cp -r ../lesson6/* .
+                - Add an else-if directive with a new wok
 
+            ## Lesson 7 (Method model with binding)
+                - $ cp -r ../lesson7/* .
+                - Implement a method function, which calculates a sum of input 1 and input 2
+
+            ## Lesson 8 (Computed model with binding)
+                - $ cp -r ../lesson8/* .
+                - Implement a computed function, which calculates a sum of before declared variables (E.g. 10+20)
+
+            ## Lesson 9 (Power of Vue.js)
+                - I will show this to you, but if you want to try and play with it:
+                - $ cp -r ../lesson9/* .
+
+            ## Lesson 10 (Build a production ready artifact)
+                - $ cd ../lesson10
+                - Content of a sample wokshop and lesson4 are existing here
+                - $ npm install
+                - $ npm run build
+                - $ ./run-docker.sh
+                - Open localhost/
         </section>
     </div>
 </div>
