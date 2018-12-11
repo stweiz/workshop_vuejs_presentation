@@ -1,0 +1,4 @@
+The HTML DOM is a structured and sorted tree. It's like an API to the objects in the tree with which the browser renders the web page and you can adjust elements.
+On big pages, this is hard to manage and inefficient, if you want to change an element through the API.
+The Virtual DOM is an abstraction of the DOM. Frameworks like Vue.js or React first manipulates its Virtual DOM with modified objects.
+Then these details are used to construct the changes in the DOM to match the DOM and the virtual DOM.

@@ -1,0 +1,2 @@
+- Excel or Calc are good examples:
+- Adjust a cell of a sum -> event triggers a recalculation of all cells defined in the sum and show the new result

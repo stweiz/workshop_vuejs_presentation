@@ -1,0 +1,17 @@
+.gitignore
+babel.config.js
+  JavaScript compiler and transpiler
+  ES6
+package.json
+  project dependencies
+  some properties
+package-lock.json
+  Complete tree of generated node_modules
+README
+  Available npm commands for building, running, testing etc.
+public directory
+  The index.html is the entrypoint for the user
+src directory
+  Our Vue.js main application
+  Our Vue.js components
+  Miscellaneous items for our Vue.js application
