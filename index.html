@@ -146,12 +146,12 @@
 
                 Create a Vue.js application:
 
-                    $ yarn global add @vue/cli
+                    $ sudo yarn global add @vue/cli
                     $ vue create wokshop
                     //Choose default
                     $ cd wokshop
                     $ yarn serve
-                    //Open http://localhost:8080/
+                    //Open http://localhost:<port>/
 
                 --
 
@@ -189,7 +189,6 @@
                 ## Lesson 4
                 ### (Display multiple instances of a component as a list)
 
-                    $ rm src/components/WokList.vue
                     $ cp -r ../lesson4/* .
                     //Extend with 3 more woks
 
@@ -253,7 +252,8 @@
                 ## Lesson 11
                 ### (HTTP requests with modifying data)
 
-                    $ cp -r ../lesson/11 .
+                    $ cd ../wokshop
+                    $ cp -r ../lesson11/* .
                     $ yarn add axios
                     $ yarn add vue-axios
                     //I will show you, how axios work
@@ -268,7 +268,7 @@
                 ## Lesson 12
                 ### (Vue-Router)
 
-                    $ cp -r ../lesson/12 .
+                    $ cp -r ../lesson12/* .
                     $ yarn add @fortawesome/fontawesome-svg-core \
                         @fortawesome/free-solid-svg-icons \
                         @fortawesome/vue-fontawesome
@@ -285,7 +285,7 @@
                 ## Lesson 13
                 ### (Vuex)
 
-                    $ cp -r ../lesson/13 .
+                    $ cp -r ../lesson13/* .
                     $ yarn add vuex
                     //Implement a method, with which I can remove an amount of
                     //the item and not the whole position
@@ -297,6 +297,7 @@
 
                     $ cd ../playground
                     $ npm install
+                    $ npm run serve
 
             </script>
         </section>
