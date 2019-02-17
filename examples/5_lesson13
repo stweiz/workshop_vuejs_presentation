@@ -1,0 +1,4 @@
+- Redux can be used in Vue.js
+- Vuex knows, that it is in a Vue application
+    - Better to integrate
+    - Intuitive API
